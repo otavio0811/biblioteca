@@ -1,0 +1,39 @@
+# Biblioteca
+
+Este projeto implementa um sistema de gerenciamento de biblioteca usando um banco de dados MySQL. O sistema permite registrar autores, livros e empréstimos.
+
+## Estrutura do Banco de Dados
+
+O banco de dados contém as seguintes tabelas:
+
+- **autores**: Armazena informações sobre os autores.
+- **livros**: Armazena informações sobre os livros, incluindo o autor associado.
+- **emprestimos**: Registra os empréstimos de livros por usuários.
+
+### Tabelas e Campos
+
+#### autores
+- `autor_id` (int, auto_increment, primary key): Identificador único do autor.
+- `nome` (varchar): Nome do autor.
+- `nacionalidade` (varchar): Nacionalidade do autor.
+
+#### livros
+- `livros_id` (int, auto_increment, primary key): Identificador único do livro.
+- `titulo` (varchar): Título do livro.
+- `autor_id` (int): Referência ao autor do livro.
+- `anopublicacao` (year): Ano de publicação do livro.
+- `genero` (varchar): Gênero do livro.
+
+#### emprestimos
+- `emprestimo_id` (int, auto_increment, primary key): Identificador único do empréstimo.
+- `livro_id` (int): Referência ao livro emprestado.
+- `dataemprestimo` (date): Data do empréstimo.
+- `datedevolucao` (date): Data de devolução (pode ser nula se o livro ainda não foi devolvido).
+- `nomeusuario` (varchar): Nome do usuário que fez o empréstimo.
+
+## Instruções para Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd Biblioteca
