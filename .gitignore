@@ -1,0 +1,12 @@
+
+### 2. .gitignore
+
+```plaintext
+# Ignorar arquivos de banco de dados
+*.sql
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos temporários
+*.tmp
